@@ -13,6 +13,9 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent.git", from: "4.8.0"),
         // 🪶 Fluent driver for SQLite.
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
+        .package(url: "https://github.com/m-barthelemy/vapor-queues-fluent-driver.git", from: "3.0.0-beta1"),
+        // WebAuthn Passkey
+        .package(url: "https://github.com/swift-server/webauthn-swift.git", from: "1.0.0-alpha"),
     ],
     targets: [
         .executableTarget(
@@ -20,7 +23,9 @@ let package = Package(
             dependencies: [
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
+                .product(name: "QueuesFluentDriver", package: "vapor-queues-fluent-driver"),
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "WebAuthn", package: "webauthn-swift")
             ]
         ),
         .testTarget(name: "AppTests", dependencies: [
