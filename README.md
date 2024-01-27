@@ -16,3 +16,9 @@ Even the roadmap is a rather ambiguous one:
 - [ ] Complete Models. 
 - [ ] Pass the minimal testing. 
 - [ ] ...
+
+# Thanks to
+
+- [brokenhandsio/Vapor-PasskeyDemo](https://github.com/brokenhandsio/Vapor-PasskeyDemo)
+- Vapor
+- [swift-server/WebAuthn-Swift](https://github.com/swift-server/webauthn-swift)

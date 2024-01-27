@@ -21,6 +21,8 @@ func routes(_ app: Application) throws {
         req.auth.logout(User.self)
         return req.redirect(to: "/")
     }
+    
+    try protected.register(collection: GardenMethods())
 
     authSessionRoutes.get("signup", use: { req -> Response in
         let username = try req.query.get(String.self, at: "username")

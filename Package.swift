@@ -16,6 +16,7 @@ let package = Package(
         .package(url: "https://github.com/m-barthelemy/vapor-queues-fluent-driver.git", from: "3.0.0-beta1"),
         // WebAuthn Passkey
         .package(url: "https://github.com/swift-server/webauthn-swift.git", from: "1.0.0-alpha"),
+        .package(url: "https://github.com/swiftpackages/DotEnv.git", from: "3.0.0"),
     ],
     targets: [
         .executableTarget(
@@ -25,7 +26,8 @@ let package = Package(
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
                 .product(name: "QueuesFluentDriver", package: "vapor-queues-fluent-driver"),
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "WebAuthn", package: "webauthn-swift")
+                .product(name: "WebAuthn", package: "webauthn-swift"),
+                .product(name: "DotEnv", package: "DotEnv"),
             ]
         ),
         .testTarget(name: "AppTests", dependencies: [

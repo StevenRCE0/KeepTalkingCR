@@ -19,6 +19,7 @@ public func configure(_ app: Application) throws {
     app.migrations.add(JobMetadataMigrate())
     app.migrations.add(CreateUser())
     app.migrations.add(CreateWebAuthnCredential())
+    app.migrations.add(CreateGarden())
 
     app.queues.use(.fluent())
     try app.queues.startInProcessJobs(on: .default)

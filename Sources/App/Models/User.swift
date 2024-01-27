@@ -16,6 +16,9 @@ final class User: Model, Content {
 
     @Children(for: \.$user)
     var credentials: [WebAuthnCredential]
+    
+    @Siblings(through: GardenUser.self, from: \.$user, to: \.$garden)
+    var gardens: [Garden]
 
     init() {}
 
