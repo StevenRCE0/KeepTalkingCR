@@ -14,7 +14,8 @@ Even the roadmap is a rather ambiguous one:
 
 - [x] Make WebAuthn backend kinda working (SQLite would do). 
 - [ ] Complete Models. 
-- [ ] Pass the minimal testing. 
+- [ ] Pass the minimal testing.
+- [ ] Eventually the signalling server will be integrated into this project, but let's use Google's Firebase for now...
 - [ ] ...
 
 # Thanks to
